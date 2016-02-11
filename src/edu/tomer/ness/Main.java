@@ -20,12 +20,31 @@ public class Main {
         System.out.println("Enter the 3rd number:");
         int num3 = scanner.nextInt();
 
-        //Test increasing order, Decreasing order, or no order
-        if ((num3>num2) &&(num2 > num1))
-            System.out.println("Increasing Order");
-        else if ((num3<num2)&&(num2<num1))
-            System.out.println("Decreasing Order");
-        else
-            System.out.println("Not Ordered");
+        //if num1 > num2 swap
+        if (num1 > num2){
+            //need to swap
+            int temp = num1;
+            num1 = num2;
+            num2 = temp;
+        }
+
+        //if num2 > num3 swap
+        if (num2 > num3){
+            //need to swap
+            int temp = num2;
+            num2 = num3;
+            num3 = temp;
+        }
+
+        //if num1 > num2 swap
+        if (num1 > num2){
+            //need to swap
+            int temp = num1;
+            num1 = num2;
+            num2 = temp;
+        }
+
+        System.out.println(num1 + ", " + num2 + ", " + num3);
+
     }
 }
