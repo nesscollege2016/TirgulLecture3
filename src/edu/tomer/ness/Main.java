@@ -7,26 +7,16 @@ public class Main {
     public static void main(String[] args) {
         //init the scanner:
         Scanner scanner = new Scanner(System.in);
-        float tipAmount;
-        //input the bill amount:
-        System.out.println("Enter the bill amount:");
-        float billAmount = scanner.nextFloat();
 
-        //input the tip percentage:
-        System.out.println("Enter the tip Percentage:");
-        float tipPercentage = scanner.nextFloat();
+        //input the radius:
+        System.out.println("Enter the circle's radius:");
+        double radius = scanner.nextDouble();
 
-        if (billAmount > 200) {
-            tipAmount = billAmount * (tipPercentage - 2) / 100;
-            System.out.println("The Tip Amount is: " + tipAmount);
-        }
-        else if (billAmount > 100){
-            tipAmount = billAmount * (tipPercentage - 1) / 100;
-            System.out.println("The Tip Amount is: " + tipAmount);
-        }
-        else {
-            tipAmount = billAmount * tipPercentage / 100;
-            System.out.println("The Tip Amount is: " + tipAmount);
-        }
+        //calculate and print the Area of the circle:
+        double area = 3.14 * (radius * radius);
+        System.out.println("The area is: " + area);
+
+        if (area > 10)
+            System.out.println("The area is Larger than 10");
     }
 }
