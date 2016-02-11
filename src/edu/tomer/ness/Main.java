@@ -8,15 +8,24 @@ public class Main {
         //init the scanner:
         Scanner scanner = new Scanner(System.in);
 
-        //input the radius:
-        System.out.println("Enter the circle's radius:");
-        double radius = scanner.nextDouble();
+        //input num1:
+        System.out.println("Enter the first number:");
+        int num1 = scanner.nextInt();
 
-        //calculate and print the Area of the circle:
-        double area = 3.14 * (radius * radius);
-        System.out.println("The area is: " + area);
+        //input num2:
+        System.out.println("Enter the 2nd number:");
+        int num2 = scanner.nextInt();
 
-        if (area > 10)
-            System.out.println("The area is Larger than 10");
+        //input num3:
+        System.out.println("Enter the 3rd number:");
+        int num3 = scanner.nextInt();
+
+        //Test increasing order, Decreasing order, or no order
+        if ((num3>num2) &&(num2 > num1))
+            System.out.println("Increasing Order");
+        else if ((num3<num2)&&(num2<num1))
+            System.out.println("Decreasing Order");
+        else
+            System.out.println("Not Ordered");
     }
 }
